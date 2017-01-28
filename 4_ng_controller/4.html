@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="langApp">
+<head>
+	<title></title>
+	<script type="text/javascript" src="../lib/bower_components/angular/angular.min.js"></script>
+</head>
+<body>
+
+<div ng-controller="languageController">
+Select Your Favourite language :	
+	<button ng-click="chooseJavascript()">Javascript</button>
+	<button ng-click="chooseJava()">Java</button>
+	<button ng-click="chooseCpp()">C++</button>
+	<button ng-click="chooseAngular()">Angular</button>
+
+	<p>You have selected: {{selectedLang}}</p>
+</div>
+
+<script>
+	var app = angular.module('langApp',[]);
+	app.controller('languageController',function($scope){
+
+		$scope.selectedLang ='None';
+
+		$scope.chooseJavascript = function(){
+			$scope.selectedLang ='Javascript';
+		}
+
+		$scope.chooseCpp = function(){
+			$scope.selectedLang ='C++';
+		}
+
+		$scope.chooseJava = function(){
+			$scope.selectedLang ='Java';
+		}
+
+		$scope.chooseAngular = function(){
+			$scope.selectedLang ='Angular';
+		}
+	})
+</script>
+</body>
+</html>

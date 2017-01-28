@@ -1,0 +1,34 @@
+<!-- filters are a way to format output -->
+
+<!DOCTYPE html>
+<html ng-app="">
+<head>
+	<title></title>
+	<script type="text/javascript" src="../lib/bower_components/angular/angular.min.js"></script>
+</head>
+<body>
+	Type your Name: <input type="text" name="name" ng-model="name">
+<p>
+	convert to uppercase using uppercase filter <div> Hello {{name |uppercase}}</div>
+
+</p>
+
+<br><br>
+	Type a number: <input type="text" name="anyNum" ng-model="anyNum">
+<p>
+	5 decimaals number:  {{anyNum |number:5}}
+	<br>
+	0 decimaals number:  {{anyNum |number:0}}
+</p>
+
+<br><br>
+	Type a price: <input type="text" name="price" ng-model="anyPrice">
+<p>
+	default currency symbol  {{anyPrice |currency}}
+	<br>
+	Your own currency {{anyPrice |currency:"Rs.":0}}
+	<br>
+	control number of decimals in currency:x {{anyPrice |currency:"Rs.":5}}
+</p>
+</body>
+</html>
